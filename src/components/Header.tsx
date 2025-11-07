@@ -42,6 +42,7 @@ const Header = () => {
             <>
               <li><a href="#live-scores" onClick={handleNavClick}>Matches</a></li>
               <li><Link to="/team" onClick={handleNavClick}>Team</Link></li>
+              <li><Link to="/about" onClick={handleNavClick}>About</Link></li>
               <li><a href="#news" onClick={handleNavClick}>News</a></li>
               <li><a href="#cta-section" onClick={handleNavClick}>Contact</a></li>
             </>
@@ -49,6 +50,7 @@ const Header = () => {
             <>
               <li><Link to="/#live-scores" onClick={handleNavClick}>Matches</Link></li>
               <li><Link to="/team" onClick={handleNavClick}>Team</Link></li>
+              <li><Link to="/about" onClick={handleNavClick}>About</Link></li>
               <li><Link to="/#news" onClick={handleNavClick}>News</Link></li>
               <li><Link to="/#cta-section" onClick={handleNavClick}>Contact</Link></li>
             </>

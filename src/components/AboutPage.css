@@ -1,0 +1,116 @@
+.about-page {
+  min-height: 100vh;
+  padding-top: 80px;
+  background: linear-gradient(135deg, #d4dde7 0%, #004488 100%);
+}
+
+.about-page-section {
+  background-color: #003366;
+  padding: 40px;
+  text-align: left;
+  color: white;
+  border: 5px solid #004488;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+.about-page-section .about-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.about-page-section .about-images img {
+  max-width: 45%;
+  min-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-page-section h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-page-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px 0 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-page-section h3 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #ffcc00;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.about-page-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.about-page-section ul {
+  list-style-type: disc;
+  margin-left: 30px;
+  margin-bottom: 1rem;
+}
+
+.about-page-section li {
+  margin: 10px 0;
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-page-section section {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 70px;
+  }
+
+  .about-page-section {
+    padding: 20px;
+    margin: 10px;
+  }
+
+  .about-page-section h1 {
+    font-size: 2rem;
+  }
+
+  .about-page-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-page-section .about-images img {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .about-page-section p {
+    font-size: 1rem;
+  }
+}
+
+.about-page-section-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 5rem;
+  margin-bottom: 30px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}

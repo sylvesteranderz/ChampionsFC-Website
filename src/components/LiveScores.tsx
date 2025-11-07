@@ -21,7 +21,7 @@ const LiveScores = () => {
             title="Live Match Scores"
           />
         </div>
-        <div style={{ fontSize: '12px', fontFamily: 'Arial, sans-serif', textAlign: 'left', width: '100%', maxWidth: '768px' }}>
+        <div className="sofascore-attribution">
           Standings provided by{' '}
           <a target="_blank" href="https://www.sofascore.com/" rel="noopener noreferrer">
             Sofascore
