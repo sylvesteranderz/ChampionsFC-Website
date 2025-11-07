@@ -1,0 +1,202 @@
+/* Player Profiles Page Styles */
+.player-profiles-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #303f9c, #243b55);
+  color: white;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.player-profiles-page h2 {
+  font-size: 2.5em;
+  margin: 20px 0;
+  color: #f0f0f0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Player Grid */
+.players-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.player-card {
+  width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.player-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.player-card h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.player-card h4 {
+  font-size: 1em;
+  margin: 5px 0;
+  color: #ddd;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.player-card p {
+  font-size: 1em;
+  color: #ddd;
+}
+
+.player-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Statistics */
+.stat {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.stat label {
+  font-size: 0.9em;
+  color: #ddd;
+  margin-bottom: 5px;
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.progress-bar {
+  background-color: #ddd;
+  border-radius: 10px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.progress {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: auto;
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  max-width: 500px;
+  width: 90%;
+  text-align: center;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal.visible {
+  display: block;
+}
+
+.modal img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.modal h3 {
+  margin: 10px 0;
+  font-size: 1.8em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.modal p {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #555;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.modal button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #e63946;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.3s;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.modal button:hover {
+  background: #d62828;
+}
+
+/* Backdrop */
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+}
+
+.backdrop.visible {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .players-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .player-card {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .player-profiles-page h2 {
+    font-size: 2em;
+  }
+}
+
+@media (max-width: 300px) {
+  .players-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
