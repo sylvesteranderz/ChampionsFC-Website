@@ -10,19 +10,19 @@ const News = () => {
   const newsItems: NewsItem[] = [
     {
       id: 1,
-      image: 'public/Images/img1.jpg',  
+      image: '/Images/img1.jpg',  
       title: 'Team Wins Championship',
       description: 'Our team clinched the championship with a thrilling victory! Find out all the exciting moments from the match.',
     },
     {
       id: 2,
-      image: 'public/Images/img2.jpg',
+      image: '/Images/img2.jpg',
       title: 'Transfer News: Star Player Signs',
       description: 'Our star player has signed a new deal. Here\'s everything you need to know about the transfer.',
     },
     {
       id: 3,
-      image: 'public/Images/img4.jpg',
+      image: '/Images/img4.jpg',
       title: 'Injury Update: Key Player Recovering',
       description: 'Injury news: Our key player is on the road to recovery. Read more about the injury and rehabilitation process.',
     },
