@@ -6,7 +6,7 @@ const AboutPage = () => {
       <section className="about-page-section">
         <div className="about-images">
           <figure>
-            <img src="Player-images/General.jpg" alt="Champions FC Team Photo" />
+            <img src="/Player-images/General.jpg" alt="Champions FC Team Photo" />
             <figcaption>Mark Anderson (Founder)</figcaption>
           </figure>
           <img src="P.jpg" alt="Match Action" />

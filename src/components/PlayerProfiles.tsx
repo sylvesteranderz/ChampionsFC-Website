@@ -27,7 +27,7 @@ const PlayerProfiles = () => {
       position: 'Midfielder',
       age: 19,
       bio: 'Nana Kofi Bermah is a skilled midfielder with great ball control and vision.',
-      image: 'Player-images/Richard.jpg',
+      image: '/Player-images/Richard.jpg',
       stats: {
         dribbling: 85,
         speed: 85,
@@ -39,7 +39,7 @@ const PlayerProfiles = () => {
       position: 'Forward',
       age: 23,
       bio: 'Kweku Victor is known for his speed and exceptional scoring ability.',
-      image: 'Player-images/Player2.jpg',
+      image: '/Player-images/Player2.jpg',
       stats: {
         dribbling: 70,
         speed: 70,
@@ -51,7 +51,7 @@ const PlayerProfiles = () => {
       position: 'Forward',
       age: 26,
       bio: 'Jamos Brown is a dynamic forward with excellent finishing skills.',
-      image: 'Player-images/Player3.jpg',
+      image: '/Player-images/Player3.jpg',
       stats: {
         dribbling: 85,
         speed: 85,
@@ -61,7 +61,7 @@ const PlayerProfiles = () => {
       name: 'Philip Siame',
       position: 'Forward',
       bio: 'Philip Siame is a versatile forward with strong attacking instincts.',
-      image: 'Player-images/Player4.jpg',
+      image: '/Player-images/Player4.jpg',
       stats: {
         dribbling: 75,
         speed: 80,
@@ -145,7 +145,7 @@ const PlayerProfiles = () => {
       name: 'Nana Kofi Bermah',
       position: 'Midfielder',
       age: 19,
-      image: 'Player-images/Richard.jpg',
+      image: '/Player-images/Richard.jpg',
       stats: { dribbling: 85, speed: 85 },
     },
     {
@@ -153,7 +153,7 @@ const PlayerProfiles = () => {
       name: 'Kweku Victor Adjei',
       position: 'Forward',
       age: 23,
-      image: 'Player-images/Player2.jpg',
+      image: '/Player-images/Player2.jpg',
       stats: { dribbling: 70, speed: 70 },
     },
     {
@@ -161,14 +161,14 @@ const PlayerProfiles = () => {
       name: 'Jamos Brown',
       position: 'Forward',
       age: 26,
-      image: 'Player-images/Player3.jpg',
+      image: '/Player-images/Player3.jpg',
       stats: { dribbling: 85, speed: 85 },
     },
     {
       id: 'philip-siame',
       name: 'Philip Siame',
       position: 'Forward',
-      image: 'Player-images/Player4.jpg',
+      image: '/Player-images/Player4.jpg',
     },
     {
       id: 'tetteh-camara',
