@@ -1,168 +1,142 @@
 import { useState } from 'react'
 import PlayerCard from './PlayerCard'
+import PlayerModal, { type ModalPlayer } from './PlayerModal'
 import './PlayerProfiles.css'
 
-interface PlayerStats {
-  dribbling?: number
-  speed?: number
-  pass?: number
-  [key: string]: number | undefined
-}
-
-interface Player {
-  name: string
-  position: string
-  age?: number
-  squadNumber: number
-  nationality: string
-  nationalityFlag: string
-  bio: string
-  image: string
-  stats: PlayerStats
-}
-
-const statLabel: Record<string, string> = {
-  dribbling: 'Dribbling',
-  speed: 'Speed',
-  pass: 'Passing',
-}
-
-const players: Player[] = [
+const players: ModalPlayer[] = [
   {
     name: 'Nana Kofi Bermah',
     position: 'Midfielder',
     age: 19,
     squadNumber: 8,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
-    bio: 'Skilled midfielder with great ball control and vision.',
-    image: '/Player-images/Richard.jpg',
-    stats: { dribbling: 85, speed: 85, pass: 72 },
+    bio: 'Engine of the midfield. Dictates tempo and covers ground tirelessly.',
+    imageUrl: '/Player-images/Richard.jpg',
+    highlightUrl: 'https://youtube.com',
+    stats: { appearances: 18, goals: 4, assists: 7, cleanSheets: 0 },
   },
   {
     name: 'Kweku Victor Adjei',
     position: 'Forward',
     age: 23,
     squadNumber: 11,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
-    bio: 'Known for his speed and exceptional scoring ability.',
-    image: '/Player-images/Player2.jpg',
-    stats: { dribbling: 70, speed: 70, pass: 50 },
+    bio: '',
+    imageUrl: '/Player-images/Player2.jpg',
+    stats: { appearances: 14, goals: 9, assists: 3, cleanSheets: 0 },
   },
   {
     name: 'Jamos Brown',
     position: 'Forward',
     age: 26,
     squadNumber: 9,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
     bio: 'Dynamic forward with excellent finishing skills.',
-    image: '/Player-images/Player3.jpg',
-    stats: { dribbling: 85, speed: 85 },
+    imageUrl: '/Player-images/Player3.jpg',
+    stats: { appearances: 16, goals: 11, assists: 2, cleanSheets: 0 },
   },
   {
     name: 'Philip Siame',
     position: 'Forward',
+    age: 22,
     squadNumber: 7,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
     bio: 'Versatile forward with strong attacking instincts.',
-    image: '/Player-images/Player4.jpg',
-    stats: { dribbling: 75, speed: 80 },
+    imageUrl: '/Player-images/Player4.jpg',
+    stats: { appearances: 12, goals: 5, assists: 4, cleanSheets: 0 },
   },
   {
     name: 'Tetteh Camara Boyd',
     position: 'Forward',
+    age: 24,
     squadNumber: 10,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
     bio: 'Brings experience and leadership to the forward line.',
-    image: '/Player-images/Players46.jpg',
-    stats: { dribbling: 70, speed: 75 },
+    imageUrl: '/Player-images/Players46.jpg',
+    stats: { appearances: 15, goals: 6, assists: 5, cleanSheets: 0 },
   },
   {
     name: 'Andy Offei',
     position: 'Forward',
+    age: 20,
     squadNumber: 17,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
     bio: 'Promising young forward with great potential.',
-    image: '/Player-images/Players45.jpg',
-    stats: { dribbling: 75, speed: 80 },
+    imageUrl: '/Player-images/Players45.jpg',
+    stats: { appearances: 10, goals: 3, assists: 2, cleanSheets: 0 },
   },
   {
     name: 'Bright Senaya',
     position: 'Forward',
+    age: 21,
     squadNumber: 14,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
     bio: 'Known for his pace and agility on the wing.',
-    image: '/Player-images/PlayerImage1.jpg',
-    stats: { dribbling: 80, speed: 85 },
+    imageUrl: '/Player-images/PlayerImage1.jpg',
+    stats: { appearances: 13, goals: 4, assists: 6, cleanSheets: 0 },
   },
   {
     name: 'Mike Kenell Amoah',
     position: 'Forward',
+    age: 25,
     squadNumber: 21,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
     bio: 'Clinical finisher with excellent positioning.',
-    image: '/Player-images/PlayerImage1 (2).jpg',
-    stats: { dribbling: 75, speed: 70 },
+    imageUrl: '/Player-images/PlayerImage1 (2).jpg',
+    stats: { appearances: 11, goals: 7, assists: 1, cleanSheets: 0 },
   },
   {
     name: 'Owusu Samuel Nketsiah',
-    position: 'Forward',
+    position: 'Midfielder',
+    age: 22,
     squadNumber: 6,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
-    bio: 'Brings creativity and flair to the attack.',
-    image: '/Player-images/PlayerImage1 (4).jpg',
-    stats: { dribbling: 80, speed: 75 },
+    bio: 'Brings creativity and flair to the midfield.',
+    imageUrl: '/Player-images/PlayerImage1 (4).jpg',
+    stats: { appearances: 17, goals: 2, assists: 8, cleanSheets: 0 },
   },
   {
     name: 'Emmanuel Tagoe',
-    position: 'Forward',
+    position: 'Defender',
+    age: 23,
     squadNumber: 3,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
-    bio: 'Hardworking forward with strong work ethic.',
-    image: '/Player-images/PlayerImage1 (5).jpg',
-    stats: { dribbling: 70, speed: 80 },
+    bio: 'Commanding defender with strong aerial ability.',
+    imageUrl: '/Player-images/PlayerImage1 (5).jpg',
+    stats: { appearances: 16, goals: 1, assists: 0, cleanSheets: 9 },
   },
   {
     name: 'Saviour Harms Azametsi',
     position: 'Goalkeeper',
+    age: 21,
     squadNumber: 1,
-    nationality: 'Ghana',
+    nationality: 'Ghanaian',
     nationalityFlag: '🇬🇭',
-    bio: 'Reliable goalkeeper with excellent reflexes.',
-    image: '/Player-images/PlayerImage1 (6).jpg',
-    stats: { dribbling: 65, speed: 70 },
+    bio: 'Reliable goalkeeper with excellent reflexes and commanding presence.',
+    imageUrl: '/Player-images/PlayerImage1 (6).jpg',
+    stats: { appearances: 18, goals: 0, assists: 0, cleanSheets: 11 },
   },
 ]
 
 const PlayerProfiles = () => {
-  const [selectedPlayer, setSelectedPlayer] = useState<Player | null>(null)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-
-  const openModal = (player: Player) => {
-    setSelectedPlayer(player)
-    setIsModalOpen(true)
-  }
-
-  const closeModal = () => {
-    setIsModalOpen(false)
-    setSelectedPlayer(null)
-  }
+  const [selectedPlayer, setSelectedPlayer] = useState<ModalPlayer | null>(null)
 
   return (
     <div className="player-profiles-page">
-      <section id="players" className="players">
-        <h2>Meet the Players</h2>
+      <section className="players-section">
+        <h2 className="players-section-title">Meet the Players</h2>
         <div className="players-grid">
-          {players.map((player) => (
+          {players.map(player => (
             <PlayerCard
               key={player.squadNumber}
               name={player.name}
@@ -171,44 +145,20 @@ const PlayerProfiles = () => {
               squadNumber={player.squadNumber}
               nationality={player.nationality}
               nationalityFlag={player.nationalityFlag}
-              imageUrl={player.image}
-              onClick={() => openModal(player)}
+              imageUrl={player.imageUrl}
+              onClick={() => setSelectedPlayer(player)}
             />
           ))}
         </div>
       </section>
 
-      {isModalOpen && (
-        <div className="backdrop visible" onClick={closeModal} />
-      )}
-
-      {isModalOpen && selectedPlayer && (
-        <div className="modal visible">
-          <img
-            src={selectedPlayer.image}
-            alt={selectedPlayer.name}
-          />
-          <h3>{selectedPlayer.name}</h3>
-          <p className="modal-position">{selectedPlayer.position}</p>
-          {selectedPlayer.age && <p>Age: {selectedPlayer.age}</p>}
-          <p>{selectedPlayer.bio}</p>
-          <div className="modal-stats">
-            {Object.entries(selectedPlayer.stats).map(([key, value]) => (
-              <div key={key} className="stat">
-                <label>{statLabel[key] ?? key}</label>
-                <div className="progress-bar">
-                  <div className="progress" style={{ width: `${value}%` }} />
-                </div>
-                <span className="stat-value">{value}</span>
-              </div>
-            ))}
-          </div>
-          <button onClick={closeModal}>Close</button>
-        </div>
-      )}
+      <PlayerModal
+        player={selectedPlayer ?? players[0]}
+        isOpen={selectedPlayer !== null}
+        onClose={() => setSelectedPlayer(null)}
+      />
     </div>
   )
 }
 
 export default PlayerProfiles
-
