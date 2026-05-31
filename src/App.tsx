@@ -4,8 +4,7 @@ import Header from './components/Header'
 import Hero from './components/Hero'
 import News from './components/News'
 import LiveScores from './components/LiveScores'
-import Stats from './components/Stats'
-import ManagerQuotes from './components/ManagerQuotes'
+import StatsStrip from './components/StatsStrip'
 
 import Gallery from './components/Gallery'
 import About from './components/About'
@@ -21,8 +20,7 @@ function Home() {
       <main>
         <News />
         <LiveScores />
-        <ManagerQuotes />
-        <Stats />
+        <StatsStrip />
         <Gallery />
         <About />
         <CTA />
