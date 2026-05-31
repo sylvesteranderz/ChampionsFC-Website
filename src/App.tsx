@@ -6,7 +6,7 @@ import News from './components/News'
 import LiveScores from './components/LiveScores'
 import StatsStrip from './components/StatsStrip'
 import PlayersPreview, { type PreviewPlayer } from './components/PlayersPreview'
-import Gallery from './components/Gallery'
+import ClubLife from './components/ClubLife'
 import About from './components/About'
 import CTA from './components/CTA'
 import Footer from './components/Footer'
@@ -113,7 +113,25 @@ function Home() {
           onViewAll={() => navigate('/team')}
         />
 
-        <Gallery />
+        <ClubLife
+          photos={[
+            {
+              imageUrl: '/Player-images/Players46.jpg',
+              title: 'Matchday Ready',
+              subtitle: 'The preparation that precedes every performance',
+            },
+            {
+              imageUrl: '/Player-images/Players45.jpg',
+              title: 'Training Ground',
+              subtitle: 'Where the work gets done',
+            },
+            {
+              imageUrl: '/Images/CFCC8.jpg',
+              title: 'The Brotherhood',
+              subtitle: 'Eleven individuals. One identity.',
+            },
+          ]}
+        />
         <About />
         <CTA />
       </main>
