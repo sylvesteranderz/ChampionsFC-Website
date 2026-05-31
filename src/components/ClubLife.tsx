@@ -14,7 +14,7 @@ const DEFAULT_PHOTOS: PhotoCard[] = [
     subtitle: 'The preparation that precedes every performance',
   },
   {
-    imageUrl: '',
+    imageUrl: '/Player-images/TrainingDay.jpg',
     title: 'Training Ground',
     subtitle: 'Where the work gets done',
   },

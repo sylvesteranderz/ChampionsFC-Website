@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import './Header.css'
 
-const NAV_LINKS = [
-  { label: 'Fixtures & Results', path: '/matches' },
+const NAV_LINKS: { label: string; path: string; external?: boolean }[] = [
+  { label: 'Fixtures & Results', path: '/#live-scores' },
   { label: 'The Squad',          path: '/team'    },
   { label: 'Our Story',          path: '/about'   },
   { label: 'Club News',          path: '/news'    },
@@ -66,12 +66,18 @@ export default function Header() {
           <ul className="nb-links">
             {NAV_LINKS.map(link => (
               <li key={link.path}>
-                <Link
-                  to={link.path}
-                  className={`nb-link${isActive(link.path) ? ' nb-link--active' : ''}`}
-                >
-                  {link.label}
-                </Link>
+                {link.path.startsWith('/#') ? (
+                  <a href={link.path} className="nb-link">
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`nb-link${isActive(link.path) ? ' nb-link--active' : ''}`}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
@@ -104,13 +110,19 @@ export default function Header() {
                 key={link.path}
                 className={`nb-mobile-item${i === NAV_LINKS.length - 1 ? ' nb-mobile-item--last' : ''}`}
               >
-                <Link
-                  to={link.path}
-                  className={`nb-mobile-link${isActive(link.path) ? ' nb-mobile-link--active' : ''}`}
-                  onClick={closeMenu}
-                >
-                  {link.label}
-                </Link>
+                {link.path.startsWith('/#') ? (
+                  <a href={link.path} className="nb-mobile-link" onClick={closeMenu}>
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    to={link.path}
+                    className={`nb-mobile-link${isActive(link.path) ? ' nb-mobile-link--active' : ''}`}
+                    onClick={closeMenu}
+                  >
+                    {link.label}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

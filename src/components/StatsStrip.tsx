@@ -8,7 +8,7 @@ interface StatItem {
 }
 
 const STATS: StatItem[] = [
-  { display: '2019', label: 'YEAR FOUNDED' },
+  { display: '2011', label: 'YEAR FOUNDED' },
   { display: '127',  label: 'MATCHES PLAYED', animateTo: 127 },
   { display: '61%',  label: 'WIN RATE' },
   { display: '203',  label: 'GOALS SCORED',   animateTo: 203 },

@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom'
 import './App.css'
 import Header from './components/Header'
-import Hero from './components/Hero'
+import HeroSlideshow from './components/HeroSlideshow'
 import News from './components/News'
 import LiveScores from './components/LiveScores'
 import StatsStrip from './components/StatsStrip'
@@ -100,7 +100,7 @@ function Home() {
 
   return (
     <>
-      <Hero />
+      <HeroSlideshow />
       <main>
         <News />
         <LiveScores />
@@ -122,12 +122,12 @@ function Home() {
               subtitle: 'The preparation that precedes every performance',
             },
             {
-              imageUrl: '/Player-images/Players45.jpg',
+              imageUrl: '/Player-images/TrainingDay.jpg',
               title: 'Training Ground',
               subtitle: 'Where the work gets done',
             },
             {
-              imageUrl: '/Images/CFCC8.jpg',
+              imageUrl: '/Player-images/Brotherhood.jpg',
               title: 'The Brotherhood',
               subtitle: 'Eleven individuals. One identity.',
             },
