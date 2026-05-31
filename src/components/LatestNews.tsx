@@ -12,31 +12,32 @@ export interface NewsItem {
 }
 
 const DEFAULT_ITEMS: NewsItem[] = [
+{
+  id: 1,
+  category: "Match Report",
+  date: "11 Apr 2026",
+  title: "Champions FC 3-2 Okoman Star Rangers: Three Points Secured",
+  excerpt: "Champions FC picked up a hard-fought 3-2 victory over Okoman Star Rangers in the ERFA Division Two. A crucial win that keeps the team pushing up the standings.",
+  imageUrl: "/Images/MatchReport.jpg"
+  // TODO: Replace with match photo
+},
   {
-    id: 1,
-    category: 'Match Report',
-    date: 'TODO: Real match date',
-    title: 'TODO: Real match headline',
-    excerpt: 'TODO: Brief match summary — what happened, who scored, what it means for the season.',
-    imageUrl: '',
-    // TODO: Replace with actual match photo
-  },
-  {
-    id: 2,
-    category: 'Player Feature',
-    date: 'TODO: Real date',
-    title: 'TODO: Player spotlight headline',
-    excerpt: 'TODO: Brief player story — achievement, milestone, or profile piece.',
-    imageUrl: '',
-    // TODO: Replace with player photo
-  },
+  id: 2,
+  category: "Player Feature",
+  date: "May 2026",
+  // TODO: Replace with actual publish date
+  title: "Nana Kofi Bermah: The Engine That Keeps Running",
+  excerpt: "18 appearances, 4 goals, 7 assists —  Bermah has been one of our standout performers this season. Dictating tempo and covering ground tirelessly from midfield.",
+  imageUrl: "/Images/PlayerFeature.jpg"
+  // TODO: Replace with Nana Kofi Bermah's photo path
+},
   {
     id: 3,
     category: 'Club News',
     date: 'TODO: Real date',
     title: 'TODO: Club update headline',
     excerpt: 'TODO: Training update, pre-season news, or club announcement.',
-    imageUrl: '',
+    imageUrl: '/Images/CFC.jpg',
     // TODO: Replace with relevant photo
   },
 ]
