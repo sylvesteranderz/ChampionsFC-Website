@@ -2,9 +2,10 @@ import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-route
 import './App.css'
 import Header from './components/Header'
 import HeroSlideshow from './components/HeroSlideshow'
-import News from './components/News'
+import LatestNews from './components/LatestNews'
 import LiveScores from './components/LiveScores'
 import StatsStrip from './components/StatsStrip'
+import NewsPage from './pages/NewsPage'
 import PlayersPreview, { type PreviewPlayer } from './components/PlayersPreview'
 import ClubLife from './components/ClubLife'
 import About from './components/About'
@@ -102,18 +103,19 @@ function Home() {
     <>
       <HeroSlideshow />
       <main>
-        <News />
+        {/* Latest Result — SofaScore live scores widget */}
         <LiveScores />
-        <StatsStrip />
 
-        {/* TODO: Replace with MatchScoresSection once Supabase matches table is built */}
-        <div />
-
+        {/* Players Preview */}
         <PlayersPreview
           players={previewPlayers}
           onViewAll={() => navigate('/team')}
         />
 
+        {/* Club News */}
+        <LatestNews />
+
+        {/* Club Life */}
         <ClubLife
           photos={[
             {
@@ -133,6 +135,10 @@ function Home() {
             },
           ]}
         />
+
+        {/* TODO: Add Sponsorship Band section */}
+
+        <StatsStrip />
         <About />
         <CTA />
       </main>
@@ -151,6 +157,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/Playerprofile.html" element={<PlayerProfiles />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/news" element={<NewsPage />} />
         </Routes>
         <Footer />
       </div>

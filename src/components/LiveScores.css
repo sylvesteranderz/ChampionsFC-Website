@@ -1,1 +1,101 @@
-/* LiveScores specific styles are now in index.css */
+/* ── Section ────────────────────────────────────────────── */
+.ls-section {
+  background: #0f172a;
+  padding: 80px 32px;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.ls-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.ls-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #f59e0b;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ls-heading {
+  font-size: 36px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 10px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.15;
+}
+
+.ls-subtext {
+  font-size: 15px;
+  color: #94a3b8;
+  font-style: italic;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ── Iframe wrapper ─────────────────────────────────────── */
+.standings-embed-wrapper {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.standings-embed-wrapper iframe {
+  display: block;
+  width: 100%;
+  border: none;
+}
+
+/* ── Branding mask ──────────────────────────────────────── */
+.ls-branding-mask {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: #fff;
+  pointer-events: none;
+}
+
+/* ── Attribution ────────────────────────────────────────── */
+.ls-attribution {
+  font-size: 11px;
+  color: #475569;
+  text-align: center;
+  margin-top: 12px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ls-attribution a {
+  color: #475569;
+  text-decoration: none;
+  transition: color 150ms ease;
+}
+
+.ls-attribution a:hover {
+  text-decoration: underline;
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .ls-section {
+    padding: 48px 16px;
+  }
+
+  .ls-heading {
+    font-size: 26px;
+  }
+
+  .standings-embed-wrapper {
+    border-radius: 10px;
+  }
+}

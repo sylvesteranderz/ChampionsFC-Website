@@ -239,105 +239,6 @@ header .logo img {
   margin-top: 10px;
 }
 
-.live-score-section {
-  padding: 50px 30px;
-  background: linear-gradient(135deg, #003366 0%, #004488 100%);
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
-  margin: 40px auto;
-  max-width: 1400px;
-  position: relative;
-  overflow: hidden;
-}
-
-.live-score-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: repeating-linear-gradient(
-    0deg,
-    transparent,
-    transparent 10px,
-    rgba(255, 255, 255, 0.03) 10px,
-    rgba(255, 255, 255, 0.03) 11px
-  );
-  pointer-events: none;
-}
-
-.live-score-section .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.live-score-section h2 {
-  font-size: 2.5em;
-  margin-bottom: 30px;
-  text-align: center;
-  font-weight: 700;
-  width: 100%;
-  color: #ffffff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  font-family: 'Montserrat', sans-serif;
-  letter-spacing: 1px;
-}
-
-.live-score-section .iframe-wrapper {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 20px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 
-              inset 0 0 0 1px rgba(0, 51, 160, 0.1);
-  transition: all 0.3s ease;
-}
-
-.live-score-section .iframe-wrapper:hover {
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4), 
-              inset 0 0 0 1px rgba(0, 51, 160, 0.2);
-  transform: translateY(-5px);
-}
-
-.live-score-section .iframe-wrapper iframe {
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.live-score-section .sofascore-attribution {
-  font-size: 13px;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  width: 100%;
-  max-width: 768px;
-  color: rgba(255, 255, 255, 0.8);
-  margin-top: 15px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
-}
-
-.live-score-section .sofascore-attribution a {
-  color: #ffcc00;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-}
-
-.live-score-section .sofascore-attribution a:hover {
-  color: #ffd700;
-  text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
-}
 
 .managers-quotes {
   background-color: #f5f5f5;
@@ -976,32 +877,6 @@ header .logo img {
   .read-more-btn {
     padding: 10px 25px;
     font-size: 1rem;
-  }
-
-  .live-score-section {
-    padding: 30px 15px;
-    margin: 20px auto;
-    border-radius: 15px;
-  }
-
-  .live-score-section h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-
-  .live-score-section .iframe-wrapper {
-    padding: 15px;
-    border-radius: 12px;
-  }
-
-  .live-score-section .iframe-wrapper iframe {
-    border-radius: 8px;
-  }
-
-  .live-score-section .sofascore-attribution {
-    font-size: 12px;
-    padding: 8px;
-    margin-top: 10px;
   }
 
   .stats {
