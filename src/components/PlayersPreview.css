@@ -1,7 +1,7 @@
 /* ── Section ────────────────────────────────────────────── */
 .pp-section {
   background: #0f172a;
-  padding: 64px 0 48px;
+  padding: 80px 0;
 }
 
 /* ── Header ─────────────────────────────────────────────── */
@@ -237,7 +237,7 @@
 /* Mobile — 1.5 cards visible, stacked header */
 @media (max-width: 640px) {
   .pp-section {
-    padding: 48px 0 36px;
+    padding: 48px 0;
   }
 
   .pp-header {

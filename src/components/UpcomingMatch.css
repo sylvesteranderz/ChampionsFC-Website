@@ -1,0 +1,273 @@
+/* ── Upcoming Match Placeholder ─────────────────────────── */
+
+.um-section {
+  background: #0f172a;
+  padding: 100px 0;
+}
+
+.um-outer-wrapper {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.um-section-label {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: #f59e0b;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.um-card {
+  background: #0d1f3c;
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  border-radius: 16px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  animation: umBorderPulse 3s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes umBorderPulse {
+  0%, 100% {
+    border-color: rgba(245, 158, 11, 0.2);
+  }
+  50% {
+    border-color: rgba(245, 158, 11, 0.4);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .um-card {
+    animation: none;
+  }
+}
+
+/* ── Background Watermark ───────────────────────────────── */
+.um-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.02);
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+  z-index: 1;
+}
+
+/* ── Header ─────────────────────────────────────────────── */
+.um-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.um-header-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #f59e0b;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.um-badge {
+  background: rgba(245, 158, 11, 0.1);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  color: #f59e0b;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ── Display Row ────────────────────────────────────────── */
+.um-display-row {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+/* Team columns */
+.um-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.um-team--home {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.um-team--away {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.um-crest-placeholder {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.um-crest-img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
+}
+
+.um-crest-question {
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.um-team-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 8px;
+  margin-bottom: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.um-team-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-top: 2px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Center VS Area */
+.um-vs-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.um-vs {
+  font-size: 28px;
+  font-weight: 900;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1;
+}
+
+.um-date {
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.um-venue {
+  font-size: 11px;
+  color: #64748b;
+  margin-top: 4px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ── Divider ────────────────────────────────────────────── */
+.um-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 24px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Bottom Row ─────────────────────────────────────────── */
+.um-bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.um-notice {
+  font-size: 12px;
+  font-style: italic;
+  color: #64748b;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.um-schedule-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: #f59e0b;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 150ms ease;
+  white-space: nowrap;
+}
+
+.um-schedule-link:hover {
+  text-decoration: underline;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .um-section {
+    padding: 48px 0;
+  }
+
+  .um-card {
+    padding: 24px;
+  }
+
+  .um-display-row {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .um-team {
+    align-items: center;
+    text-align: center;
+  }
+
+  .um-team--home,
+  .um-team--away {
+    align-items: center;
+    text-align: center;
+  }
+
+  .um-vs-area {
+    padding: 10px 0;
+  }
+
+  .um-bottom-row {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}

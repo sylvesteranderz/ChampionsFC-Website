@@ -8,12 +8,11 @@ import StatsStrip from './components/StatsStrip'
 import NewsPage from './pages/NewsPage'
 import PlayersPreview, { type PreviewPlayer } from './components/PlayersPreview'
 import ClubLife from './components/ClubLife'
-import About from './components/About'
-import CTA from './components/CTA'
 import Footer from './components/Footer'
 import PlayerProfiles from './components/PlayerProfiles'
 import AboutPage from './components/AboutPage'
 import Contact from './components/Contact'
+import UpcomingMatch from './components/UpcomingMatch'
 
 const previewPlayers: PreviewPlayer[] = [
   {
@@ -103,17 +102,20 @@ function Home() {
     <>
       <HeroSlideshow />
       <main>
+        {/* Upcoming Match Card */}
+        <UpcomingMatch />
+
         {/* Latest Result — SofaScore live scores widget */}
         <LiveScores />
+
+        {/* Club News */}
+        <LatestNews />
 
         {/* Players Preview */}
         <PlayersPreview
           players={previewPlayers}
           onViewAll={() => navigate('/team')}
         />
-
-        {/* Club News */}
-        <LatestNews />
 
         {/* Club Life */}
         <ClubLife
@@ -139,8 +141,6 @@ function Home() {
         {/* TODO: Add Sponsorship Band section */}
 
         <StatsStrip />
-        <About />
-        <CTA />
       </main>
     </>
   )

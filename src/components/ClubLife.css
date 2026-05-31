@@ -1,7 +1,7 @@
 /* ── Section ────────────────────────────────────────────── */
 .cl-section {
   background: #112240;
-  padding: 72px 40px 80px;
+  padding: 80px 40px;
 }
 
 /* ── Header ─────────────────────────────────────────────── */
@@ -133,7 +133,7 @@
 /* ── Tablet: 2 columns, third full width ────────────────── */
 @media (max-width: 900px) {
   .cl-section {
-    padding: 56px 24px 64px;
+    padding: 56px 24px;
   }
 
   .cl-grid {
@@ -151,7 +151,7 @@
 /* ── Mobile: single column ──────────────────────────────── */
 @media (max-width: 600px) {
   .cl-section {
-    padding: 48px 16px 56px;
+    padding: 48px 16px;
   }
 
   .cl-grid {
