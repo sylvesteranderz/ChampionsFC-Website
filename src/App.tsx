@@ -12,6 +12,7 @@ import CTA from './components/CTA'
 import Footer from './components/Footer'
 import PlayerProfiles from './components/PlayerProfiles'
 import AboutPage from './components/AboutPage'
+import Contact from './components/Contact'
 
 const previewPlayers: PreviewPlayer[] = [
   {
@@ -149,6 +150,7 @@ function App() {
           <Route path="/team" element={<PlayerProfiles />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/Playerprofile.html" element={<PlayerProfiles />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />
       </div>

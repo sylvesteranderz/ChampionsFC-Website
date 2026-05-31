@@ -1,0 +1,268 @@
+/* ── Page wrapper ───────────────────────────────────────── */
+.ct-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(to bottom,
+      rgba(15, 23, 42, 0.88) 0%,
+      rgba(15, 23, 42, 0.92) 60%,
+      rgba(15, 23, 42, 0.97) 100%),
+    url('/Images/jannik-skorna-rrIcdUpghyM-unsplash.jpg') center / cover no-repeat fixed;
+  padding: 80px 24px;
+}
+
+.ct-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* ── Page header ────────────────────────────────────────── */
+.ct-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.ct-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #f59e0b;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ct-heading {
+  font-size: 42px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 20px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.1;
+}
+
+.ct-subtext {
+  font-size: 16px;
+  color: #94a3b8;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ── Contact cards grid ─────────────────────────────────── */
+.ct-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+
+.ct-card {
+  background: #0d1f3c;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 250ms ease, box-shadow 250ms ease, transform 250ms ease;
+}
+
+.ct-card:hover {
+  border-color: rgba(245, 158, 11, 0.35);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+/* ── Category pill ──────────────────────────────────────── */
+.ct-pill {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(245, 158, 11, 0.12);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+  border-radius: 999px;
+  padding: 4px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #f59e0b;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+  align-self: flex-start;
+}
+
+/* ── Card content ───────────────────────────────────────── */
+.ct-card-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.3;
+}
+
+.ct-card-desc {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.7;
+  margin: 10px 0 28px;
+  font-family: 'Montserrat', sans-serif;
+  flex: 1;
+}
+
+/* Primary button */
+.ct-whatsapp-btn {
+  display: block;
+  width: 100%;
+  padding: 13px;
+  background: transparent;
+  border: 1.5px solid #f59e0b;
+  color: #f59e0b;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 200ms ease, color 200ms ease;
+  box-sizing: border-box;
+}
+
+.ct-whatsapp-btn:hover {
+  background: #f59e0b;
+  color: #0f172a;
+}
+
+/* Secondary email link */
+.ct-email-link {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 13px;
+  color: #64748b;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 150ms ease, text-decoration 150ms ease;
+}
+
+.ct-email-link:hover {
+  color: #f59e0b;
+  text-decoration: underline;
+}
+
+/* ── Divider ────────────────────────────────────────────── */
+.ct-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 56px 0;
+}
+
+/* ── Bottom row: location + socials ─────────────────────── */
+.ct-bottom-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* ── Section label (reused) ─────────────────────────────── */
+.ct-section-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #f59e0b;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ── Location ───────────────────────────────────────────── */
+.ct-address {
+  display: flex;
+  flex-direction: column;
+  font-style: normal;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.8;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 20px;
+}
+
+.ct-map-wrap {
+  border-radius: 10px;
+  overflow: hidden;
+  height: 220px;
+}
+
+.ct-map {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+/* ── Socials ────────────────────────────────────────────── */
+.ct-socials-subtext {
+  font-size: 14px;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0 0 24px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ct-social-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ct-social-pill {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  text-decoration: none;
+  transition: border-color 200ms ease;
+}
+
+.ct-social-pill:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.ct-social-name {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ct-social-follow {
+  font-size: 13px;
+  color: #f59e0b;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ── Mobile ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .ct-page {
+    padding: 60px 20px;
+  }
+
+  .ct-heading {
+    font-size: 32px;
+  }
+
+  .ct-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ct-bottom-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
