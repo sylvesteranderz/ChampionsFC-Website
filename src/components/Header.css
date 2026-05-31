@@ -1,1 +1,244 @@
-/* Header specific styles are now in index.css */
+/* ── Header shell ───────────────────────────────────────── */
+.nb-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(8, 15, 26, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: background 250ms ease, box-shadow 250ms ease;
+}
+
+.nb-header--scrolled {
+  background: rgba(8, 15, 26, 0.98);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Inner bar ──────────────────────────────────────────── */
+.nb-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ── Logo ───────────────────────────────────────────────── */
+.nb-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nb-logo-img {
+  height: 38px;
+  width: auto;
+}
+
+.nb-brand {
+  font-size: 15px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.06em;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
+}
+
+/* ── Desktop nav ────────────────────────────────────────── */
+.nb-desktop-nav {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.nb-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nb-link {
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  padding: 8px 4px;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 200ms ease;
+  white-space: nowrap;
+}
+
+.nb-link:hover {
+  color: #fff;
+}
+
+/* Active underline */
+.nb-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #f59e0b;
+  transform: scaleX(0);
+  transition: transform 200ms ease;
+  border-radius: 1px;
+}
+
+.nb-link--active {
+  color: #f59e0b;
+}
+
+.nb-link--active::after {
+  transform: scaleX(1);
+}
+
+/* ── Right zone ─────────────────────────────────────────── */
+.nb-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+/* CTA button */
+.nb-cta {
+  padding: 8px 18px;
+  border: 1.5px solid rgba(245, 158, 11, 0.6);
+  border-radius: 8px;
+  color: #f59e0b;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 200ms ease, border-color 200ms ease;
+}
+
+.nb-cta:hover {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: #f59e0b;
+}
+
+/* ── Hamburger ──────────────────────────────────────────── */
+.nb-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-shrink: 0;
+}
+
+.nb-burger-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: transform 300ms ease, opacity 300ms ease;
+}
+
+.nb-burger--open .nb-burger-line:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nb-burger--open .nb-burger-line:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nb-burger--open .nb-burger-line:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Mobile menu ────────────────────────────────────────── */
+.nb-mobile-menu {
+  background: rgba(8, 15, 26, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 16px 24px 24px;
+}
+
+.nb-mobile-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nb-mobile-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nb-mobile-item--last {
+  border-bottom: none;
+}
+
+.nb-mobile-link {
+  display: block;
+  padding: 14px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  transition: color 150ms ease;
+}
+
+.nb-mobile-link:hover,
+.nb-mobile-link--active {
+  color: #f59e0b;
+}
+
+.nb-mobile-cta {
+  display: block;
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1.5px solid rgba(245, 158, 11, 0.6);
+  border-radius: 8px;
+  color: #f59e0b;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: background 200ms ease, border-color 200ms ease;
+  box-sizing: border-box;
+}
+
+.nb-mobile-cta:hover {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: #f59e0b;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .nb-desktop-nav {
+    display: none;
+  }
+
+  .nb-cta {
+    display: none;
+  }
+
+  .nb-burger {
+    display: flex;
+  }
+}
